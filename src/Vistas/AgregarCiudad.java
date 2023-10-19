@@ -243,7 +243,7 @@ public class AgregarCiudad extends javax.swing.JInternalFrame {
         CiudadData cd = new CiudadData();
         Ciudad ciudad = new Ciudad();
         ciudad.setIdCiudad(Integer.parseInt(jTextField5.getText()));
-        cd.eliminarCiudad(ciudad);
+        //cd.eliminarCiudad(ciudad);
         
         
     }//GEN-LAST:event_jbeliminarActionPerformed
