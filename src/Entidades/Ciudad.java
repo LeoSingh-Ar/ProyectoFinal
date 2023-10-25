@@ -72,7 +72,9 @@ public class Ciudad {
 
     @Override
     public String toString() {
-        return "Ciudad{" + "idCiudad=" + idCiudad + ", nombre=" + nombre + ", provincia=" + provincia + ", pais=" + pais + '}';
+        return idCiudad + "- " + nombre + ", " + provincia + ", " + pais;
+                
+        //"Ciudad{" + "idCiudad=" + idCiudad + ", nombre=" + nombre + ", provincia=" + provincia + ", pais=" + pais + '}';
     }
    
 }

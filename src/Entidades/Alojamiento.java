@@ -5,7 +5,7 @@
  */
 package Entidades;
 
-import java.time.LocalDate;
+
 
 /**
  *
@@ -14,23 +14,22 @@ import java.time.LocalDate;
 public class Alojamiento {
     
     private int idAlojamiento;
-    private LocalDate fechaIn;
-    private LocalDate fechaOn;
     private boolean estado;
     private String servicio;
     private double importeDiario;
     private Ciudad ciudadDestino;
+    private String tipoAlojamiento;
 
     public Alojamiento() {
     }
 
-    public Alojamiento(LocalDate fechaIn, LocalDate fechaOn, boolean estado, String servicio, double importeDiario, Ciudad ciudadDestino) {
-        this.fechaIn = fechaIn;
-        this.fechaOn = fechaOn;
+    public Alojamiento(boolean estado, String servicio, double importeDiario, Ciudad ciudadDestino, String tipoAlojamiento) {
+
         this.estado = estado;
         this.servicio = servicio;
         this.importeDiario = importeDiario;
         this.ciudadDestino = ciudadDestino;
+        this.tipoAlojamiento = tipoAlojamiento;
     }
 
     public Alojamiento(int idAlojamiento) {
@@ -43,22 +42,6 @@ public class Alojamiento {
 
     public void setIdAlojamiento(int idAlojamiento) {
         this.idAlojamiento = idAlojamiento;
-    }
-
-    public LocalDate getFechaIn() {
-        return fechaIn;
-    }
-
-    public void setFechaIn(LocalDate fechaIn) {
-        this.fechaIn = fechaIn;
-    }
-
-    public LocalDate getFechaOn() {
-        return fechaOn;
-    }
-
-    public void setFechaOn(LocalDate fechaOn) {
-        this.fechaOn = fechaOn;
     }
 
     public boolean isEstado() {
@@ -92,6 +75,15 @@ public class Alojamiento {
     public void setCiudadDestino(Ciudad ciudadDestino) {
         this.ciudadDestino = ciudadDestino;
     }
+
+    public String getTipoAlojamiento() {
+        return tipoAlojamiento;
+    }
+
+    public void setTipoAlojamiento(String tipoAlojamiento) {
+        this.tipoAlojamiento = tipoAlojamiento;
+    }
+    
     
     
 }
