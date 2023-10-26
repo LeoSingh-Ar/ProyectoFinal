@@ -7,8 +7,10 @@ package proyectofinal;
 
 import AccesoDatos.CiudadData;
 import AccesoDatos.Conexion;
+import AccesoDatos.PasajeData;
 import AccesoDatos.Usuariodata;
 import Entidades.Ciudad;
+import Entidades.Pasaje;
 import Entidades.Usuario;
 import java.util.List;
 
@@ -28,7 +30,7 @@ public class ProyectoFinal {
         
         //Ciudad buenosAires = new Ciudad("Manhattan", "New York", "Estados Unidos", true);
         //buenosAires.setIdCiudad(1);
-        //CiudadData cd = new CiudadData();
+        CiudadData cd = new CiudadData();
         //cd.crearCiudad(buenosAires);
         //System.out.println(cd.buscarCiudadPorId(1).toString());
         //cd.eliminarCiudad(2);
@@ -38,15 +40,13 @@ public class ProyectoFinal {
             System.out.println(ciudad.toString());
         }*/
         
-        Usuario us = new Usuario("Leo", 1234, true);
+        //Usuario us = new Usuario("Leo", 1234, true);
+        //Usuariodata ud = new Usuariodata();
+        //ud.crearUsuario(us);
         
-        Usuariodata ud = new Usuariodata();
-        
-        ud.crearUsuario(us);
-        
-        
-        
-        
+        /*Pasaje pasaje = new Pasaje("Automovil", 2000, cd.buscarCiudadPorId(3), true);
+        PasajeData pd = new PasajeData();
+        pd.crearPasaje(pasaje);*/
     }
     
 }

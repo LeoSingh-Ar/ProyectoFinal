@@ -73,8 +73,11 @@ public class Ciudad {
     @Override
     public String toString() {
         return idCiudad + "- " + nombre + ", " + provincia + ", " + pais;
+<<<<<<< Updated upstream
                 
         //"Ciudad{" + "idCiudad=" + idCiudad + ", nombre=" + nombre + ", provincia=" + provincia + ", pais=" + pais + '}';
+=======
+>>>>>>> Stashed changes
     }
    
 }

@@ -12,6 +12,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -48,5 +50,29 @@ public class PaqueteData {
     
     public void modificarPaquete(Paquete paquete) {
         
+    }
+    
+    public List<Paquete> listarPaquetes() {
+       List<Paquete> paquetes = new ArrayList<>();
+       CiudadData cd = new CiudadData();
+       PasajeData pd = new PasajeData();
+       AlojamientoData ad = new AlojamientoData();
+       try {
+            String sql = "SELECT * FROM paquete WHERE estado = 1";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                 Paquete paquete = new Paquete();
+                 paquete.setIdPaquete(rs.getInt("idPaquete"));
+                 paquete.setOrigen(cd.buscarCiudadPorId(rs.getInt("idCiudadOrigen")));
+                 paquete.setDestino(cd.buscarCiudadPorId(rs.getInt("idCiudadDestino")));
+                 paquete.setAlojamiento(ad.buscarAlojamientoPorId(rs.getInt("idAlojamiento")));
+                 paquete.setPasaje(pd.buscarPasajePorId(rs.getInt("idPasaje")));
+            }
+            ps.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, " Error al acceder a la tabla Paquete");
+        }
+       return paquetes;
     }
 }
