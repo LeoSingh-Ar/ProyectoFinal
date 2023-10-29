@@ -33,6 +33,7 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMcrearusuario = new javax.swing.JMenuItem();
         jMmodificarusuario = new javax.swing.JMenuItem();
@@ -86,6 +87,15 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
             }
         });
         jMenu1.add(jMenuItem3);
+
+        jMenuItem4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jMenuItem4.setText("Modificar Alojamiento");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
 
         jMenuBar1.add(jMenu1);
 
@@ -211,6 +221,20 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jMmodificarusuarioActionPerformed
 
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        
+        ModificarAlojamiento ma = new ModificarAlojamiento();
+        
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        ma.setVisible(true);
+        jDesktopPane1.add(ma);
+        jDesktopPane1.revalidate();
+        
+        
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
@@ -221,6 +245,7 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMmodificarusuario;
     // End of variables declaration//GEN-END:variables
 

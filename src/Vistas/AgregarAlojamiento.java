@@ -49,8 +49,6 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
         jbagregar1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jbagregar2 = new javax.swing.JButton();
-        jbagregar3 = new javax.swing.JButton();
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -101,20 +99,6 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
             }
         });
 
-        jbagregar2.setText("Eliminar");
-        jbagregar2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbagregar2ActionPerformed(evt);
-            }
-        });
-
-        jbagregar3.setText("Modificar");
-        jbagregar3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbagregar3ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -128,10 +112,7 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jbagregar1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jbagregar3))
+                            .addComponent(jbagregar1)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
@@ -154,8 +135,6 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jbagregar2)
-                                .addGap(18, 18, 18)
                                 .addComponent(jbagregar))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -192,9 +171,7 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
                 .addGap(52, 52, 52)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbagregar)
-                    .addComponent(jbagregar1)
-                    .addComponent(jbagregar3)
-                    .addComponent(jbagregar2))
+                    .addComponent(jbagregar1))
                 .addGap(15, 15, 15))
         );
 
@@ -232,16 +209,8 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
          
     }//GEN-LAST:event_jbagregar1ActionPerformed
 
-    private void jbagregar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbagregar2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbagregar2ActionPerformed
-
-    private void jbagregar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbagregar3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbagregar3ActionPerformed
-
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:     
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
 
@@ -261,8 +230,6 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton jbagregar;
     private javax.swing.JButton jbagregar1;
-    private javax.swing.JButton jbagregar2;
-    private javax.swing.JButton jbagregar3;
     // End of variables declaration//GEN-END:variables
 
     private void cargarCombo() {

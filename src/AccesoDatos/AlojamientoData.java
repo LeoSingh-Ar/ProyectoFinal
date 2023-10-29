@@ -98,6 +98,7 @@ public class AlojamientoData {
     
     public List<Alojamiento> listarAlojamientos() {
         List<Alojamiento> alojamientos = new ArrayList<>();
+        //AlojamientoData cdw = new AlojamientoData();
         CiudadData cd = new CiudadData();
         try {
             String sql = "SELECT * FROM alojamiento WHERE estado = 1";
@@ -106,15 +107,16 @@ public class AlojamientoData {
             while (rs.next()) {
                 Alojamiento alojamiento = new Alojamiento();
                 alojamiento.setIdAlojamiento(rs.getInt("idAlojamiento"));
+                alojamiento.setTipoAlojamiento(rs.getString("tipoAlojamiento"));
                 alojamiento.setEstado(true);
                 alojamiento.setServicio(rs.getString("servicio"));
                 alojamiento.setImporteDiario(rs.getDouble("importeDiario"));
-                alojamiento.setCiudadDestino(cd.buscarCiudadPorId(rs.getInt("idCiudadOrigen")));
+                alojamiento.setCiudadDestino(cd.buscarCiudadPorId(rs.getInt("idCiudadDestino")));
                 alojamientos.add(alojamiento);
             }
             ps.close();
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Pasaje");
+            JOptionPane.showMessageDialog(null, "Error al acceder a la tabla Alojamiento");
         }
         return alojamientos;
     }

@@ -84,6 +84,11 @@ public class Alojamiento {
         this.tipoAlojamiento = tipoAlojamiento;
     }
     
-    
+    @Override
+    public String toString() {
+        return idAlojamiento + "- " + tipoAlojamiento + ", " + servicio + ", " + estado;
+                
+        //"Ciudad{" + "idCiudad=" + idCiudad + ", nombre=" + nombre + ", provincia=" + provincia + ", pais=" + pais + '}';
+    }
     
 }
