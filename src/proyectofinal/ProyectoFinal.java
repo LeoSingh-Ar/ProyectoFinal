@@ -5,10 +5,12 @@
  */
 package proyectofinal;
 
+import AccesoDatos.AlojamientoData;
 import AccesoDatos.CiudadData;
 import AccesoDatos.Conexion;
 import AccesoDatos.PasajeData;
 import AccesoDatos.Usuariodata;
+import Entidades.Alojamiento;
 import Entidades.Ciudad;
 import Entidades.Pasaje;
 import Entidades.Usuario;
@@ -47,6 +49,11 @@ public class ProyectoFinal {
         /*Pasaje pasaje = new Pasaje("Automovil", 2000, cd.buscarCiudadPorId(3), true);
         PasajeData pd = new PasajeData();
         pd.crearPasaje(pasaje);*/
+        
+        AlojamientoData ad = new AlojamientoData();
+        Alojamiento a = new Alojamiento(true, "desayuno", 15000, cd.buscarCiudadPorId(1), "Hotel");
+        //ad.crearAlojamiento(a);
+        System.out.println(ad.listarAlojamientos());
     }
     
 }
