@@ -29,11 +29,13 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
 
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        jModificarciudad = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMcrearusuario = new javax.swing.JMenuItem();
         jMmodificarusuario = new javax.swing.JMenuItem();
@@ -53,11 +55,11 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
             .addGap(0, 651, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Menu");
-        jMenu1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+        jModificarciudad.setText("Menu");
+        jModificarciudad.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jModificarciudad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu1ActionPerformed(evt);
+                jModificarciudadActionPerformed(evt);
             }
         });
 
@@ -68,7 +70,7 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
                 jMenuItem1ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jModificarciudad.add(jMenuItem1);
 
         jMenuItem2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenuItem2.setText("Formulario Alojamiento");
@@ -77,7 +79,7 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
                 jMenuItem2ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        jModificarciudad.add(jMenuItem2);
 
         jMenuItem3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenuItem3.setText("Formulario Pasaje");
@@ -86,7 +88,7 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
                 jMenuItem3ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        jModificarciudad.add(jMenuItem3);
 
         jMenuItem4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenuItem4.setText("Modificar Alojamiento");
@@ -95,9 +97,27 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
                 jMenuItem4ActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem4);
+        jModificarciudad.add(jMenuItem4);
 
-        jMenuBar1.add(jMenu1);
+        jMenuItem5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jMenuItem5.setText("Modificar Ciudad");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jModificarciudad.add(jMenuItem5);
+
+        jMenuItem6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jMenuItem6.setText("Modificar Pasaje");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jModificarciudad.add(jMenuItem6);
+
+        jMenuBar1.add(jModificarciudad);
 
         jMenu2.setText("Usuario Admin");
         jMenu2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -147,8 +167,6 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         
         
-        
-        
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -177,10 +195,11 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
-    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
-        // TODO add your handling code here: NO USAR
+    private void jModificarciudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jModificarciudadActionPerformed
+        // TODO add your handling code here:
+        
    
-    }//GEN-LAST:event_jMenu1ActionPerformed
+    }//GEN-LAST:event_jModificarciudadActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
         // TODO add your handling code here:
@@ -235,18 +254,48 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        // TODO add your handling code here:
+        
+        
+         ModificarCiudad mc = new ModificarCiudad();
+        
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        mc.setVisible(true);
+        jDesktopPane1.add(mc);
+        jDesktopPane1.revalidate();
+        
+        
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        
+        ModificarPasaje mp = new ModificarPasaje();
+        
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        mp.setVisible(true);
+        jDesktopPane1.add(mp);
+        jDesktopPane1.revalidate();
+        
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenuItem jMcrearusuario;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMmodificarusuario;
+    private javax.swing.JMenu jModificarciudad;
     // End of variables declaration//GEN-END:variables
 
     

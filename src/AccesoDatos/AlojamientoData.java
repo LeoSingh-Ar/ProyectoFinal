@@ -77,14 +77,14 @@ public class AlojamientoData {
     }
     
     public void modificarAlojamiento(Alojamiento alojamiento) {
-        String sql = "UPDATE alojamiento SET estado = ?, servicio = ?, importeDiario = ?, idCiudadDestino = ? WHERE idAlojamiento = ?";
+        String sql = "UPDATE alojamiento SET tipoAlojamiento = ?, estado = ?, servicio = ?, importeDiario = ? WHERE idAlojamiento = ?";
         try{
             PreparedStatement ps = con.prepareStatement(sql);
-            ps.setBoolean(3, alojamiento.isEstado());
-            ps.setString(4, alojamiento.getServicio());
-            ps.setDouble(5, alojamiento.getImporteDiario());
-            ps.setInt(6, alojamiento.getCiudadDestino().getIdCiudad());
-            ps.setInt(7, alojamiento.getIdAlojamiento());
+            ps.setString(1, alojamiento.getTipoAlojamiento());
+            ps.setBoolean(2, alojamiento.isEstado());
+            ps.setString(3, alojamiento.getServicio());
+            ps.setDouble(4, alojamiento.getImporteDiario());
+            ps.setInt(5, alojamiento.getIdAlojamiento());
             int exito = ps.executeUpdate();
             if(exito == 1){
                 JOptionPane.showMessageDialog(null, "Se actulizó el alojamiento");

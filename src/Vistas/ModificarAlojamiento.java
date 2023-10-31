@@ -22,6 +22,7 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
      */
     public ModificarAlojamiento() {
         initComponents();
+        jRbestadomodificar.setSelected(true);
         //cargarCombo();
         cargarCombo2();
     }
@@ -53,7 +54,6 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
         jbmodificar1 = new javax.swing.JButton();
         jBuscar = new javax.swing.JButton();
 
-        setClosable(true);
         setTitle("Modificar Alojamiento");
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -125,6 +125,9 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(jbmodificar1))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addComponent(jLabel4)
@@ -139,16 +142,17 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jbSalir1))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jCbciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jtservicio)
-                            .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jCbciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel1)
-                                    .addComponent(jtimporte, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 22, Short.MAX_VALUE))))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                        .addComponent(jtimporte, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 273, Short.MAX_VALUE)
+                                        .addComponent(jtservicio, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addGap(0, 26, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
@@ -156,11 +160,7 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCbModificar1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtalojamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(jbmodificar1)))
-                .addContainerGap())
+                            .addComponent(jtalojamiento, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,15 +206,10 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
     private void jbeliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbeliminarActionPerformed
         // TODO add your handling code here:
         
-        AlojamientoData ad = new AlojamientoData();
-        Alojamiento al = new Alojamiento();
-        int id = al.getIdAlojamiento();
-        ad.eliminarAlojamiento(id);
-        //al.setTipoAlojamiento(jtalojamiento.getText());
-        //al.setServicio(jtservicio.getText());
-        //al.setImporteDiario(Integer.parseInt(jtimporte.getText()));
-        //al.setEstado(jRbestadomodificar.isEnabled());
-        //ad.eliminarAlojamiento(al);
+        AlojamientoData modificar = new AlojamientoData();
+        Alojamiento nuevoalojamiento = (Alojamiento) jCbModificar1.getSelectedItem();
+        modificar.eliminarAlojamiento(nuevoalojamiento.getIdAlojamiento());
+       
         
     }//GEN-LAST:event_jbeliminarActionPerformed
 
@@ -240,10 +235,12 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
         if(jCbModificar1.getItemCount() > 0){
         
             Alojamiento al = (Alojamiento)jCbModificar1.getSelectedItem();
+            Alojamiento alj = new Alojamiento();
             jtalojamiento.setText(al.getTipoAlojamiento());
             jtservicio.setText(al.getServicio());
             jtimporte.setText(al.getImporteDiario() + "");
             jRbestadomodificar.isEnabled();
+            
         
         }
             
@@ -253,7 +250,21 @@ public class ModificarAlojamiento extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jCbModificar1ActionPerformed
 
     private void jbmodificar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbmodificar1ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:}
+        
+        double importe = Double.parseDouble(jtimporte.getText());
+        AlojamientoData modificar = new AlojamientoData();
+        Alojamiento al = new Alojamiento();
+        Alojamiento nuevoalojamiento = (Alojamiento) jCbModificar1.getSelectedItem();
+        al.setTipoAlojamiento(jtalojamiento.getText());
+        al.setServicio(jtservicio.getText());
+        al.setImporteDiario(importe);
+        al.setIdAlojamiento(nuevoalojamiento.getIdAlojamiento());
+        al.setEstado(true);
+        modificar.modificarAlojamiento(al);
+        
+        
+        
     }//GEN-LAST:event_jbmodificar1ActionPerformed
 
     private void jBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBuscarActionPerformed
