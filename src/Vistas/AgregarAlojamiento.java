@@ -52,7 +52,6 @@ public class AgregarAlojamiento extends javax.swing.JInternalFrame {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        setClosable(true);
         setTitle("Formulario de Alojamiento");
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
