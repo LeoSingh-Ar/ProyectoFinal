@@ -237,6 +237,7 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         mu.setVisible(true);
         jDesktopPane1.add(mu);
         jDesktopPane1.revalidate();
+        //nuevapruebamodificacion
         
     }//GEN-LAST:event_jMmodificarusuarioActionPerformed
 
