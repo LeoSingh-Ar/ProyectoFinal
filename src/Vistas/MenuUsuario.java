@@ -32,8 +32,6 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
-        setClosable(true);
-
         javax.swing.GroupLayout usuarioescritorioLayout = new javax.swing.GroupLayout(usuarioescritorio);
         usuarioescritorio.setLayout(usuarioescritorioLayout);
         usuarioescritorioLayout.setHorizontalGroup(
