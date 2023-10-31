@@ -58,17 +58,16 @@ public class PaqueteData {
        PasajeData pd = new PasajeData();
        AlojamientoData ad = new AlojamientoData();
        try {
-            String sql = "SELECT * FROM paquete";
+            String sql = "SELECT * FROM paquete WHERE estado = 1";
             PreparedStatement ps = con.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Paquete paquete = new Paquete();
-                paquete.setIdPaquete(rs.getInt("idPaquete"));
-                paquete.setOrigen(cd.buscarCiudadPorId(rs.getInt("idCiudadOrigen")));
-                paquete.setDestino(cd.buscarCiudadPorId(rs.getInt("idCiudadDestino")));
-                paquete.setAlojamiento(ad.buscarAlojamientoPorId(rs.getInt("idAlojamiento")));
-                paquete.setPasaje(pd.buscarPasajePorId(rs.getInt("idPasaje")));
-                paquetes.add(paquete);
+                 Paquete paquete = new Paquete();
+                 paquete.setIdPaquete(rs.getInt("idPaquete"));
+                 paquete.setOrigen(cd.buscarCiudadPorId(rs.getInt("idCiudadOrigen")));
+                 paquete.setDestino(cd.buscarCiudadPorId(rs.getInt("idCiudadDestino")));
+                 paquete.setAlojamiento(ad.buscarAlojamientoPorId(rs.getInt("idAlojamiento")));
+                 paquete.setPasaje(pd.buscarPasajePorId(rs.getInt("idPasaje")));
             }
             ps.close();
         } catch (SQLException ex) {

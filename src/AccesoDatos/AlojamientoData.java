@@ -56,17 +56,16 @@ public class AlojamientoData {
         CiudadData cd = new CiudadData();
         PreparedStatement ps = null;
         try {
-            String sql = "SELECT tipoAlojamiento, servicio, importeDiario, idCiudadDestino FROM alojamiento WHERE idAlojamiento = ? AND estado = 1";
+            String sql = "SELECT servicio, importeDiario, idCiudadDestino FROM alojamiento WHERE idAlojamiento = ? AND estado = 1";
             ps = con.prepareStatement(sql);
             ps.setInt(1,id ); 
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
                 alojamiento.setIdAlojamiento(id);
                 alojamiento.setEstado(true);
-                alojamiento.setTipoAlojamiento(rs.getString("tipoAlojamiento"));
                 alojamiento.setServicio(rs.getString("servicio"));
                 alojamiento.setImporteDiario(rs.getDouble("importeDiario"));
-                alojamiento.setCiudadDestino(cd.buscarCiudadPorId(rs.getInt("idCiudadDestino")));
+                alojamiento.setCiudadDestino(cd.buscarCiudadPorId(rs.getInt("idCiudadOrigen")));
             }else{
                 JOptionPane.showMessageDialog(null, "Alojamiento no disponible.");
                 ps.close();
