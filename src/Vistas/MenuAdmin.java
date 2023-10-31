@@ -35,7 +35,10 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
+<<<<<<< Updated upstream
         jMenuItem6 = new javax.swing.JMenuItem();
+=======
+>>>>>>> Stashed changes
         jMenu2 = new javax.swing.JMenu();
         jMcrearusuario = new javax.swing.JMenuItem();
         jMmodificarusuario = new javax.swing.JMenuItem();
@@ -100,12 +103,17 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         jModificarciudad.add(jMenuItem4);
 
         jMenuItem5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+<<<<<<< Updated upstream
         jMenuItem5.setText("Modificar Ciudad");
+=======
+        jMenuItem5.setText("Agregar Paquete");
+>>>>>>> Stashed changes
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
             }
         });
+<<<<<<< Updated upstream
         jModificarciudad.add(jMenuItem5);
 
         jMenuItem6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -118,6 +126,11 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         jModificarciudad.add(jMenuItem6);
 
         jMenuBar1.add(jModificarciudad);
+=======
+        jMenu1.add(jMenuItem5);
+
+        jMenuBar1.add(jMenu1);
+>>>>>>> Stashed changes
 
         jMenu2.setText("Usuario Admin");
         jMenu2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
@@ -256,6 +269,7 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
+<<<<<<< Updated upstream
         
         
          ModificarCiudad mc = new ModificarCiudad();
@@ -282,6 +296,16 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
+=======
+        AgregarPaquete ap = new AgregarPaquete();
+        jDesktopPane1.removeAll();
+        jDesktopPane1.repaint();
+        ap.setVisible(true);
+        jDesktopPane1.add(ap);
+        jDesktopPane1.revalidate();
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+>>>>>>> Stashed changes
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
@@ -293,7 +317,10 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+<<<<<<< Updated upstream
     private javax.swing.JMenuItem jMenuItem6;
+=======
+>>>>>>> Stashed changes
     private javax.swing.JMenuItem jMmodificarusuario;
     private javax.swing.JMenu jModificarciudad;
     // End of variables declaration//GEN-END:variables
