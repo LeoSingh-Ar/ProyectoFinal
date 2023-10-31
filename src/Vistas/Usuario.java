@@ -362,6 +362,5 @@ public class Usuario extends javax.swing.JInternalFrame {
         }
         jtPaquetesDisponibles.setModel(modelo);
         jtPaquetesSeleccionados.setModel(modelo2);
-        
     } 
 }
