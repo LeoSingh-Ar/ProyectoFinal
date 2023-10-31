@@ -158,7 +158,7 @@ public class Login extends javax.swing.JPanel {
         
         }else{
         
-            MenuAdmin menu = new MenuAdmin();
+            /*MenuAdmin menu = new MenuAdmin();
         
         menu.setSize(865, 699);
         menu.setLocation(0, 0);
@@ -170,7 +170,7 @@ public class Login extends javax.swing.JPanel {
         menu.setVisible(true);
         jPescritoriouser.add(menu, BorderLayout.CENTER);
         jPescritoriouser.revalidate();
-        menu.setResizable(false);
+        menu.setResizable(false);*/
         
         }
         
