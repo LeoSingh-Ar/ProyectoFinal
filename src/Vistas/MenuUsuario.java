@@ -30,7 +30,8 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         usuarioescritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         javax.swing.GroupLayout usuarioescritorioLayout = new javax.swing.GroupLayout(usuarioescritorio);
         usuarioescritorio.setLayout(usuarioescritorioLayout);
@@ -43,19 +44,35 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
             .addGap(0, 651, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Menu");
+        jMenu1.setText("  Crear Presupuesto");
         jMenu1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-
-        jMenuItem1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jMenuItem1.setText("Crear");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+        jMenu1.setPreferredSize(new java.awt.Dimension(155, 19));
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
-
+        jMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu1ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("   Paquetes Disponibles");
+        jMenu2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jMenu2.setPreferredSize(new java.awt.Dimension(175, 19));
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("  Salir");
+        jMenu3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jMenu3.setPreferredSize(new java.awt.Dimension(50, 19));
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -73,27 +90,42 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu1ActionPerformed
         // TODO add your handling code here:
-        
-        
-        
         Usuario us = new Usuario();
-        
         usuarioescritorio.removeAll();
         usuarioescritorio.repaint();
         us.setVisible(true);
         usuarioescritorio.add(us);
         usuarioescritorio.revalidate();
-        
-        
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_jMenu1ActionPerformed
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        // TODO add your handling code here:
+        Usuario us = new Usuario();
+        usuarioescritorio.removeAll();
+        usuarioescritorio.repaint();
+        us.setVisible(true);
+        usuarioescritorio.add(us);
+        usuarioescritorio.revalidate();
+    }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        // TODO add your handling code here:
+        MostrarPaquetes mp = new MostrarPaquetes();
+        usuarioescritorio.removeAll();
+        usuarioescritorio.repaint();
+        mp.setVisible(true);
+        usuarioescritorio.add(mp);
+        usuarioescritorio.revalidate();
+    }//GEN-LAST:event_jMenu2MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JDesktopPane usuarioescritorio;
     // End of variables declaration//GEN-END:variables
 }
