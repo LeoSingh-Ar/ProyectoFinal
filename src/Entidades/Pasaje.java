@@ -71,5 +71,13 @@ public class Pasaje {
     public void setEstado(boolean estado) {
         this.estado = estado;
     }
+
+    @Override
+    public String toString() {
+        return idPasaje + "- " + tipoTransporte + ", " + importe ;
+        //return "Pasaje{" + "idPasaje=" + idPasaje + ", tipoTransporte=" + tipoTransporte + ", importe=" + importe + ", CiudadOrigen=" + CiudadOrigen + '}';
+    }
+    
+    
     
 }
