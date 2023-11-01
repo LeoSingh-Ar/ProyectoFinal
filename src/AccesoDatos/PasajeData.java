@@ -72,15 +72,15 @@ public class PasajeData {
     }
     
     public void modificarPasaje(Pasaje pasaje) {
-        String sql = "UPDATE pasaje SET  tipoTransporte = ?, importe = ?, idCiudadOrigen = ?, estado = ? WHERE idPasaje = ?";
+        String sql = "UPDATE pasaje SET  tipoTransporte = ?, importe = ?, estado = ? WHERE idPasaje = ?";
         PreparedStatement ps = null;         
         try{
             ps = con.prepareStatement(sql);
             ps.setString(1, pasaje.getTipoTransporte());
             ps.setDouble(2, pasaje.getImporte());
-            ps.setInt(3, pasaje.getCiudadOrigen().getIdCiudad());
-            ps.setBoolean(4, pasaje.isEstado());
-            ps.setInt(5, pasaje.getIdPasaje());
+            //ps.setInt(3, pasaje.getCiudadOrigen().getIdCiudad());
+            ps.setBoolean(3, pasaje.isEstado());
+            ps.setInt(4, pasaje.getIdPasaje());
             int exito = ps.executeUpdate();
             if(exito == 1){
                 JOptionPane.showMessageDialog(null, "Se actualizó el pasaje.");
