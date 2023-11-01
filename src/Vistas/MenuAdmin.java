@@ -37,10 +37,8 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
         jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
 
         setTitle("Panel Administrador");
 
@@ -121,10 +119,6 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         });
         jMenu1.add(jMenuItem9);
 
-        jMenuItem10.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jMenuItem10.setText("Modificar Paquete");
-        jMenu1.add(jMenuItem10);
-
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Usuario Admin");
@@ -138,15 +132,6 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
             }
         });
         jMenu2.add(jMenuItem6);
-
-        jMenuItem7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jMenuItem7.setText("Modificar Usuario");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem7);
 
         jMenuBar1.add(jMenu2);
 
@@ -248,21 +233,6 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
         
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
-        
-        
-        ModificarUsuario mu = new ModificarUsuario();
-        
-        jDesktopPane1.removeAll();
-        jDesktopPane1.repaint();
-        mu.setVisible(true);
-        jDesktopPane1.add(mu);
-        jDesktopPane1.revalidate();
-        
-        
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
-
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
         
@@ -297,13 +267,11 @@ public class MenuAdmin extends javax.swing.JInternalFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     // End of variables declaration//GEN-END:variables
