@@ -72,6 +72,16 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         jMenu3.setText("  Salir");
         jMenu3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jMenu3.setPreferredSize(new java.awt.Dimension(50, 19));
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenu3ActionPerformed(evt);
+            }
+        });
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
@@ -119,6 +129,19 @@ public class MenuUsuario extends javax.swing.JInternalFrame {
         usuarioescritorio.add(mp);
         usuarioescritorio.revalidate();
     }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
+        // TODO add your handling code here:
+        usuarioescritorio.removeAll();
+        MenuUsuario.this.setVisible(false);
+    }//GEN-LAST:event_jMenu3ActionPerformed
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        // TODO add your handling code here:
+        usuarioescritorio.removeAll();
+        usuarioescritorio.repaint();
+        MenuUsuario.this.setVisible(false);
+    }//GEN-LAST:event_jMenu3MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -43,8 +43,18 @@ public class MostrarPaquetes extends javax.swing.JInternalFrame {
         jbSalir = new javax.swing.JButton();
         jbFiltrar = new javax.swing.JButton();
         jbMostrar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(853, 642));
+
+        cbCiudadDestino.setMaximumSize(new java.awt.Dimension(200, 32767));
+        cbCiudadDestino.setMinimumSize(new java.awt.Dimension(200, 20));
+        cbCiudadDestino.setPreferredSize(new java.awt.Dimension(200, 20));
+
+        cbCiudadOrigen.setMaximumSize(new java.awt.Dimension(200, 32767));
+        cbCiudadOrigen.setMinimumSize(new java.awt.Dimension(200, 20));
+        cbCiudadOrigen.setPreferredSize(new java.awt.Dimension(200, 20));
 
         jtPaquetesDisponibles.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -66,30 +76,42 @@ public class MostrarPaquetes extends javax.swing.JInternalFrame {
             }
         });
 
+        jbFiltrar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jbFiltrar.setText("Filtrar");
+        jbFiltrar.setMaximumSize(new java.awt.Dimension(130, 25));
+        jbFiltrar.setMinimumSize(new java.awt.Dimension(130, 25));
+        jbFiltrar.setPreferredSize(new java.awt.Dimension(130, 25));
         jbFiltrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbFiltrarActionPerformed(evt);
             }
         });
 
+        jbMostrar.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jbMostrar.setText("Mostrar todos");
+        jbMostrar.setMaximumSize(new java.awt.Dimension(130, 25));
+        jbMostrar.setMinimumSize(new java.awt.Dimension(130, 25));
+        jbMostrar.setPreferredSize(new java.awt.Dimension(130, 25));
         jbMostrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbMostrarActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setText("Ciudad Origen:");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Ciudad Destino:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(cbCiudadOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(cbCiudadDestino, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(137, 137, 137))
+                .addGap(23, 23, 23)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 791, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(23, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,29 +119,36 @@ public class MostrarPaquetes extends javax.swing.JInternalFrame {
                         .addComponent(jbSalir)
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jbFiltrar)
-                        .addGap(173, 173, 173)
-                        .addComponent(jbMostrar)
-                        .addGap(278, 278, 278))))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 804, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jbFiltrar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbCiudadOrigen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel1))
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(cbCiudadDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(208, 208, 208))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(85, 85, 85)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbCiudadOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbCiudadDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(99, 99, 99)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbMostrar)
-                    .addComponent(jbFiltrar))
+                    .addComponent(jbMostrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbFiltrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
                 .addComponent(jbSalir)
                 .addContainerGap())
         );
@@ -164,6 +193,8 @@ public class MostrarPaquetes extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<Ciudad> cbCiudadDestino;
     private javax.swing.JComboBox<Ciudad> cbCiudadOrigen;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbFiltrar;
     private javax.swing.JButton jbMostrar;
